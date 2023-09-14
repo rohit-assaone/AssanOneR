@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="footer bg-light p-4">
+    <footer className="footer bg-primary p-4" style={{width: "100%", color: "white"}}>
       <div className="row">
         <div className="col-md-12 Assan">
           Assan Saathi by Assan One Insurance Broker PVT. LTD.

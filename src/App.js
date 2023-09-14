@@ -7,11 +7,9 @@ import { login, reset, selectUserName, setIsLoggedIn, setUser } from './redux/au
 import Cookies from 'js-cookie';
 import {HashRouter, Routes, Route} from 'react-router-dom'
 
-import setSidebar from '../src/redux/inAppSlice'
+import {setSidebar} from '../src/redux/inAppSlice'
 
-
-
-import Home from './screens/Home';
+import Home from './screens/HOME/Home';
 
 import Aside from './components/Aside';
 import Footer from './components/Footer';
@@ -90,7 +88,7 @@ function App() {
 
   return (
     <div>
-    <div className="App container">
+    <div className="App ">
     <HashRouter>
       {!isLoggedIn && (
         <Routes>
@@ -109,7 +107,10 @@ function App() {
           <Navbar />
           <div className='row' style={{marginTop: "50px"}}>
             <div className={`col-3`} >
+              <a onClick={toggleSidebar}> <i className='fa-solid fa-bars'
 
+              ></i>
+              </a>
                 <Aside />
             </div>
             <div className='col' style={{height: "100vh"}}>
