@@ -1,3 +1,9 @@
+.place-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 nav{
     background-color: #f3fbff;
     position: fixed;
@@ -15,6 +21,7 @@ nav{
 .ripple-background {
     background: #3399ff;
     position: relative;
+
 }
 
 
@@ -23,7 +30,7 @@ nav{
     
     border-radius: 50%;
     background: rgb(255, 255, 255);
-    animation: ripple 15s infinite;
+
     box-shadow: 0px 0px 1px 0px #508fb9;
 }
   
@@ -81,17 +88,12 @@ nav{
     opacity: 0.9;
   }
   
-  @keyframes ripple{
-    0%{
-      transform: scale(0.8);
-    }
-    
-    50%{
-      transform: scale(1.2);
-    }
-    
-    100%{
-      transform: scale(0.8);
-    }
-  }
+ 
   
+.custom-nav {
+  height: 90px;
+}
+
+  .back {
+    background-color: #dfeefc;
+  }

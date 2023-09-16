@@ -10,19 +10,17 @@ const Footer = () => {
         <div className="col-md-12">
           <i className="fa fa-phone"></i>
           <a href="tel:18002081155">
-            <span>022 48808692</span>
+            <span style={{color: "white"}}>022 48808692</span>
           </a>
-          <span className="seperate">|</span>
+          <span className="seperate" style={{color: "white"}}>|</span>
           <br />
           <i className="fa fa fa-clock-o"></i>
           <br />
           <i className="fa fa-envelope"></i>
           <a href="mailto:support@Assan one.com">hr@assanone.com</a>
 
-     
-
           <div className="copyright mb-3">
-            Copyright © 2023 <strong><a href="#" className='text-decoration-none text-black'>Assan one Insurance Broker PVT. LTD.</a>.</strong> All rights reserved.
+            Copyright © 2023 <strong style={{color: "white"}}><a href="#" className='text-decoration-none text-black'>Assan one Insurance Broker PVT. LTD.</a>.</strong> All rights reserved.
             <a href="">Legal Information</a>
           </div>
 
@@ -46,7 +44,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="" target="_blank" title="Instagram">
-                  <i class="fa-brands fa-instagram"></i>
+                  <i style={{color: "white"}} class="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li>
