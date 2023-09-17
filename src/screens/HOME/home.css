@@ -1,3 +1,4 @@
+
 .place-center {
   display: flex;
   justify-content: center;
@@ -16,16 +17,21 @@ nav{
 }
 .dk {
 
-    margin-top: 75px;
+    margin-top: 60px;
 }
 .ripple-background {
     background: #3399ff;
     position: relative;
-
 }
 
-
+.headerIMG {
+  z-index: 2;
+}
+.whole-card {
+  z-index: 3;
+}
 .circle{
+  z-index: 1;
     position: absolute;
     
     border-radius: 50%;
@@ -49,10 +55,10 @@ nav{
   }
   
   .large{
-    width: 479px;
-    height: 480px;
-    left: 0px;
-    bottom: 0px;
+    width: 478px;
+    height: 344px;
+    left: 384px;
+    bottom: -506px;
   }
   
   .xlarge{
@@ -66,7 +72,7 @@ nav{
     width: 518px;
     height: 515px;
     left: -127px;
-    bottom: -211px;
+    bottom: 274px;
   }
   
 .shade1{
@@ -94,6 +100,6 @@ nav{
   height: 90px;
 }
 
-  .back {
-    background-color: #dfeefc;
-  }
+.back {
+  background-color: #dfeefc;
+}

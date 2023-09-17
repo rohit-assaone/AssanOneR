@@ -57,7 +57,7 @@ const Home = ({setLogedIn}) => {
     
   return (
     <>
-    <nav className='navbar d-flex justify-content-between align-items-center' >
+    <nav className='flex justify-content-between align-items-center h-14 md:h-16' >
             <img src={ASSANONELOGO} alt="" className='img-fluid' style={{maxWidth: "20%", marginLeft: "50px"}} />
             <Link to='/register'><button className='btn btn-primary px-4' style={{marginRight: "50px", maxWidth: "180px"}}>Register as POSP</button></Link>
     </nav>
@@ -67,37 +67,42 @@ const Home = ({setLogedIn}) => {
   .circle.large.shade3
   .circle.mediun.shade4
   .circle.small.shade5 */}
-    <div className='container-fluid'>
-
-        <div className='ripple-background row' style={{marginBottom: "3rem"}} >
-            <div className=' circle xxlarge shade1'>
+    <div className='grid grid-rows-3 dk overflow-hidden text-center'>
+        {/* part 1 */}
+        <div className='grid grid-rows-2 place-items-center md:grid md:grid-row-1 md:grid-cols-2 ripple-background' >
+            
+            {/* animation of circle */}
+            <div className='circle xxlarge shade1'>
                 <div className='circle xlarge shade2'>
                     <div className='circle large shade3'>
-                        <div className='circle medium shade4'>
-                                <div className='circle small shade5'>
-                                </div>
-                        </div>
+               
+                 
+             
                     </div>
                 </div>
             </div>
-            {/* row */}
-            <div className='row column-gap-3 place-center login-container' style={{marginBottom: "6rem"}}>
+
+
+
                 {/* col 1 */}
-                <div className='col-md'>
-                    <img src={HomepageIllustration} 
-                        style={{minWidth: "55%", maxWidth: "100%"}}
-                        alt="Insurance"/>
-                </div>
+
+                <img src={HomepageIllustration} 
+                    width={"86%"}
+                    alt="Insurance"
+                    className='headerIMG'/>
+
                 {/* col 2 */}
-                <div className='col-md' style={{display:"grid", placeItems:"center"}}>
+                <div className='mb-5 grid place-items-center md:col-span-1 whole-card' >
                     {/* card */}
-                    <div className="card p-4" style={{width: "65%", display:"grid", placeItems: "center", boxShadow: "6px 4px 5px 0px rgba(219,219,219,1)"}}>
-                        <div className="card-body" >
-                            <h4 className="card-title"><strong>Enter Your Mobile Number / Partner Code</strong></h4>
-                            <p className="card-text">Enter your Number and get OTP to verificatior</p>                        
-                            <div className="input-group mb-3 d-flex flex-column">                            
-                                <div className='d-flex flex-column mb-3'>    
-                                    <input type="email" style={{width:"100%",backgroundColor: "rgba(137, 230, 244, 0.48)"}} 
+                    <div className="card p-3 w-[85%] md:grid md:place-items-center" style={{ boxShadow: "6px 4px 5px 0px rgba(219,219,219,1)"}}>
+                        <div className="card-body md:w-[85%] md:h-96 md:flex md:flex-col md:justify-evenly md:items-center" >
+                            <div className='mb-4'>
+                                <h2 className="card-title"><strong>Enter Your Mobile Number / Partner Code</strong></h2>
+                                <p className="card-text">Enter your Number and get OTP to verificatior</p>                        
+                            </div>
+                            <div className="input-group md:flex md:flex-col md:w-[100%]">                            
+ 
+                                    <input type="email" style={{width: "100%",backgroundColor: "rgba(137, 230, 244, 0.48)"}} 
                                             className="form-control mb-3" 
                                             placeholder="Enter email" 
                                             aria-label="Enter email" aria-describedby="basic-addon1"
@@ -110,28 +115,28 @@ const Home = ({setLogedIn}) => {
                                                 <Spinner />
                                             </div>
                                         }
-                                        <input type="password" style={{width:"100%",backgroundColor: "rgba(137, 230, 244, 0.48)"}} 
+
+                                        <input type="password" style={{width: "100%",backgroundColor: "rgba(137, 230, 244, 0.48)"}} 
                                                 className="form-control mb-3" 
                                                 placeholder="Enter password" 
                                                 aria-label="Enter email" aria-describedby="basic-addon1"
                                                 value={password} 
                                                 onChange={(e) => setPassword(e.target.value)}
                                         /> 
-                                        <button className='btn btn-primary' style={{width: "100%"}} onClick={handleLogin}>Login</button>
-                                </div>       
+                                        <button className='btn btn-primary rounded-full m-0' style={{width: "100%"}} onClick={handleLogin}>Login</button>
                             </div>
                         </div>                                         
                     </div>
                 </div>
 
-            </div>
+
         </div>
 
 
         {/* 2nd part */}
-        <div className='mb-2 container row mx-auto place-center' style={{height: "100vh"}}>
-            <div className='col' style={{width: "100%"}}>
-                <h2>Why us?</h2>
+        <div className='container-fluid row mx-auto mb-5 place-center'>
+            <div className='' style={{width: "100%"}}>
+                <h1>Why us?</h1>
                 <div className='d-flex justify-content-center mb-5'>
                     <p className='fs-5 w-75 text-center mb-3'>
                         <strong>
@@ -141,73 +146,80 @@ const Home = ({setLogedIn}) => {
                     </p>
                 </div>
 
-                <div className='row column-gap-3 mb-4'>
-                    <div className='col' style={{width: "100px"}}>
-                        <img src={approoved} alt="SVG" className='mb-3' style={{width: "100px"}}/>
+                <div className='grid grid-rows-2 grid-cols-3 gap-x-5 gap-y-10'>
+                    <div className='grid place-items-center'>
+                        <img src={approoved} alt="SVG" className='' style={{width: "70px"}}/>
                         <h5>IRDA Approved</h5>
                         <p>Assan One is IRDA approved Insurance broking company</p>
                     </div>
-                    <div className='col'>
-                        <img src={assanOneProcess} alt="SVG" className='mb-3' style={{width: "100px"}}/>
+                    <div className='grid place-items-center'>
+
+                            <img src={assanOneProcess} alt="SVG" className='' style={{width: "70px"}}/>
+
                         <h3>Assan online process</h3>
-                        <p >Assan One is IRDA approved Insurance broking company</p>
+                        <p>Assan One is IRDA approved Insurance broking company</p>
                     </div>
-                    <div className='col'>
-                        <img src={paperFree} alt="svg" className='mb-3' style={{width: "100px"}}/>
+                    <div className='grid place-items-center'>
+
+                            <img src={paperFree} alt="svg" className='' style={{width: "70px"}}/>
+
                         <h3>IRDA Approved</h3>
                         <p>Assan One is IRDA approved Insurance broking company</p>
                     </div>
-                </div>
-                <div className='row column-gap-3'>
-                    <div className='col'>
-                        <img src={zeroInvestment} alt="svg" className='mb-3' style={{width: "100px"}}/>
+      
+                    <div className='grid place-items-center'>
+
+                        <img src={zeroInvestment} alt="svg" className='' style={{width: "70px"}}/>
+
                         <h5>Zero Investment</h5>
                         <p>All you need to have is a smartphone with internet connectivity.</p>
                     </div>
-                    <div className='col'>
-                        <img src={handsOnTraining} alt="svg" className='mb-3' style={{width: "100px"}}/>
+                    <div className='grid place-items-center'>
+
+                        <img src={handsOnTraining} alt="svg" className='' style={{width: "70px"}}/>
+
                         <h3>Assan online process</h3>
                         <p>Get latest certifications on latest products by industry, experts and get ahead in your game.</p>
                     </div>
-                    <div className='col'>
-                        <img src={timelyPayouts} alt="svg" className='mb-3' style={{width: "100px"}}/>
+                    <div className='grid place-items-center'>
+
+                        <img src={timelyPayouts} alt="svg" className='' style={{width: "70px"}}/>
+
                         <h3>Timely Payouts</h3>
                         <p>Recieve Payments on time without delays</p>
                     </div>
-                </div>
-        
+
+                </div> 
             </div>
         </div>
 
 
 
         {/* 3rd part */}
-        <div className='back'>
-        <div className=" container row mx-auto place-center p-5" style={{height: "100vh"}}>
-            <div className='d-flex justify-content-center mb-5'>
+        <div className='back text-black w-[100%]'>
+        <div className="flex-col place-center py-5" >
+            <div className='flex justify-content-center mb-5'>
                 <h1 className='w-75 text-center mb-5'>
                     Ease of using Assan One Platform
                 </h1>
                 <hr style={{height: "2px"}}/>
             </div>
 
-            <div className='row column-gap-3 mb-4'>
-                <div className='col'>
-
-                    <img src={fillTheDetail} alt="svg" className='mb-3' style={{width: "100px"}}/>
-
-                    <h3 className='mb-4'>Fill the details</h3>
-                    <p>Fill in your details and Get insurance policy, premium quotes from top rated insurance instantly</p>
+            <div className='grid gap-y-16 mb-4 w-[70%]'>
+                <div className='grid place-items-center'>
+                    <img src={fillTheDetail} alt="svg" className='mb-4' style={{width: "100px"}}/>
+                    <h3 className='mb-2'>Fill the details</h3>
+                    <p className='text-center'>Fill in your details and Get insurance policy, premium quotes from top rated insurance instantly</p>
                 </div>
-                <div className='col'>
-                    <img src={compareQuotes} alt="svg" className='mb-3' style={{width: "100px"}}/>
-                    <h3>Compare quotes and Choose a insurance policy</h3>
-                    <p>From numerous available quotes choose the one that best suits your requirements and budget</p>
+                <div className='grid place-items-center'>
+                    <img src={compareQuotes} alt="svg" className='mb-4' style={{width: "100px"}}/>
+                    <h3 className='mb-2 text-center'>Compare quotes and Choose a insurance policy.</h3>
+                    <p className='text-center'>From numerous available quotes choose the one that best suits your requirements and budget</p>
                 </div>
-                <div className='col'>
-                    <img src={makePaymentRelax} alt="svg" className='mb-3' style={{width: "100px"}}/>
-                    <h3>Make payment and be relax.</h3>
-                    <p> pay online and get your policy right away in your inbox.</p>
+                <div className='grid place-items-center'>
+                    <img src={makePaymentRelax} alt="svg" className='mb-4' style={{width: "100px"}}/>
+                    <h3 className='mb-2'>Make payment and be relax.</h3>
+                    <p className='text-center'> pay online and get your policy right away in your inbox.</p>
                 </div>
             </div> 
         </div>
