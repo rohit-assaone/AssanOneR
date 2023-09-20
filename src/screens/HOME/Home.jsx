@@ -57,8 +57,8 @@ const Home = ({setLogedIn}) => {
     
   return (
     <>
-    <nav className='flex justify-content-between align-items-center h-14 md:h-16' >
-            <img src={ASSANONELOGO} alt="" className='img-fluid' style={{maxWidth: "20%", marginLeft: "50px"}} />
+    <nav className='flex justify-content-between align-items-center h-16 md:h-20' >
+            <img src={ASSANONELOGO} alt="" className='img-fluid h-[60%]' style={{maxWidth: "20%", marginLeft: "50px"}} />
             <Link to='/register'><button className='btn btn-primary px-4' style={{marginRight: "50px", maxWidth: "180px"}}>Register as POSP</button></Link>
     </nav>
     {/* .ripple-background
@@ -67,14 +67,14 @@ const Home = ({setLogedIn}) => {
   .circle.large.shade3
   .circle.mediun.shade4
   .circle.small.shade5 */}
-    <div className='grid grid-rows-3 dk overflow-hidden text-center'>
+    <div className='grid dk overflow-hidden text-center'>
         {/* part 1 */}
-        <div className='grid grid-rows-2 place-items-center md:grid md:grid-row-1 md:grid-cols-2 ripple-background' >
+        <div className='grid grid-rows-1 place-items-center md:grid md:grid-row-1 md:grid-cols-2 ripple-background' >
             
             {/* animation of circle */}
             <div className='circle xxlarge shade1'>
                 <div className='circle xlarge shade2'>
-                    <div className='circle large shade3'>
+                    <div className='circle large shade3 md:hidden'>
                
                  
              
@@ -134,7 +134,7 @@ const Home = ({setLogedIn}) => {
 
 
         {/* 2nd part */}
-        <div className='container-fluid row mx-auto mb-5 place-center'>
+        <div className='container-fluid row mx-auto mb-5 place-center p-[80px]'>
             <div className='' style={{width: "100%"}}>
                 <h1>Why us?</h1>
                 <div className='d-flex justify-content-center mb-5'>
@@ -197,34 +197,35 @@ const Home = ({setLogedIn}) => {
 
         {/* 3rd part */}
         <div className='back text-black w-[100%]'>
-        <div className="flex-col place-center py-5" >
-            <div className='flex justify-content-center mb-5'>
-                <h1 className='w-75 text-center mb-5'>
-                    Ease of using Assan One Platform
-                </h1>
-                <hr style={{height: "2px"}}/>
-            </div>
+            <div className="flex-col place-center py-5 md:w-[100%]" >
+                <div className='grid place-items-center mb-5'>
+                    <h1 className='w-75 text-center mb-5 md:w-[100%]'>
+                        Ease of using Assan One Platform
+                    </h1>
+                    <hr style={{height: "4px", width: "500px"}}/>
+                </div>
 
-            <div className='grid gap-y-16 mb-4 w-[70%]'>
-                <div className='grid place-items-center'>
-                    <img src={fillTheDetail} alt="svg" className='mb-4' style={{width: "100px"}}/>
-                    <h3 className='mb-2'>Fill the details</h3>
-                    <p className='text-center'>Fill in your details and Get insurance policy, premium quotes from top rated insurance instantly</p>
-                </div>
-                <div className='grid place-items-center'>
-                    <img src={compareQuotes} alt="svg" className='mb-4' style={{width: "100px"}}/>
-                    <h3 className='mb-2 text-center'>Compare quotes and Choose a insurance policy.</h3>
-                    <p className='text-center'>From numerous available quotes choose the one that best suits your requirements and budget</p>
-                </div>
-                <div className='grid place-items-center'>
-                    <img src={makePaymentRelax} alt="svg" className='mb-4' style={{width: "100px"}}/>
-                    <h3 className='mb-2'>Make payment and be relax.</h3>
-                    <p className='text-center'> pay online and get your policy right away in your inbox.</p>
-                </div>
-            </div> 
+                <div className='grid gap-y-16 mb-4 w-[70%] md:grid md:grid-rows-1 md:grid-cols-3 md:gap-x-16'>
+                    <div className='grid place-items-center'>
+                        <img src={fillTheDetail} alt="svg" className='mb-4' style={{width: "100px"}}/>
+                        <h3 className='mb-2'>Fill the details</h3>
+                        <p className='text-center'>Fill in your details and Get insurance policy, premium quotes from top rated insurance instantly</p>
+                    </div>
+                    <div className='grid place-items-center'>
+                        <img src={compareQuotes} alt="svg" className='mb-4' style={{width: "100px"}}/>
+                        <h3 className='mb-2 text-center'>Compare quotes and Choose a insurance policy.</h3>
+                        <p className='text-center'>From numerous available quotes choose the one that best suits your requirements and budget</p>
+                    </div>
+                    <div className='grid place-items-center'>
+                        <img src={makePaymentRelax} alt="svg" className='mb-4' style={{width: "100px"}}/>
+                        <h3 className='mb-2'>Make payment and be relax.</h3>
+                        <p className='text-center'> pay online and get your policy right away in your inbox.</p>
+                    </div>
+                </div> 
+            </div>
         </div>
-    
-        </div>
+
+        {/* end of home */}
     </div>
     <Footer />
     </>

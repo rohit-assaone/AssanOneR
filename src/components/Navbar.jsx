@@ -9,9 +9,6 @@ const Navbar = () => {
 
     const naviagte = useNavigate();
     const dispatch = useDispatch();
-
-    const {isLoggedIn} = useSelector((state) => state.user);
-
     const handleLogout = (e) => {
         e.preventDefault();
         Cookies.remove('token');
@@ -22,17 +19,13 @@ const Navbar = () => {
 
   return (
     <>
-        <nav class="navbar navbar-expand-sm bg-white fixed-top ">
-            <div class="container d-flex justify-content-between" >
-                <div>
-                <h5> <a href="/"><img src={ASSANONELOGO} className="navbar-brand img-fluid" href="#" alt='logo' style={{width: "15rem"}}/> </a>  </h5>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+        <nav class="container-fluid flex justify-content-between align-items-center h-16 md:h-16">
 
-                </div>
+
+                <a href="/"><img src={ASSANONELOGO} className="navbar-brand img-fluid" href="#" alt='logo' style={{width: "15rem"}}/> </a> 
+
                 <div className="" id="navbarSupportedContent">
-                    <ul className="navbar-nav align-items-center">
+                    <ul className="flex align-items-center">
                         <li className="nav-item mx-3">
                         <h5><a href='/' className="nav-link active" aria-current="page">Home</a></h5>
                         </li>
@@ -64,8 +57,7 @@ const Navbar = () => {
                     </ul>
 
                 </div>
-            </div>
-            <hr />
+
         </nav>
 
     </>

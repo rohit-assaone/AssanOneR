@@ -2,8 +2,9 @@ import React from 'react'
 
 const Dashboard = () => {
   return (
-    <div className='text-start'>
-        <h4 className='text-primary' style={{marginBottom: "50px"}}>DASHBOARD</h4>
+    <div className='w-[100%]'>
+        <h1 className='text-primary' style={{marginBottom: "50px"}}>DASHBOARD</h1>
+        {/* row 1 */}
         <div className='row mb-3 column-gap-4'>
           <div className='col d-flex flex-column align-items-center border rounded p-4'>
             <p><i class="fa-regular fa-file-lines fa-2x"></i></p>
@@ -13,6 +14,7 @@ const Dashboard = () => {
           <div className='col d-flex flex-column align-items-center border rounded p-4'>
             <p><i class="fa-regular fa-file-lines fa-2x"></i></p>
             <p>Premium</p>
+
             <h2 className='text-primary'>2,500</h2>
           </div>
           <div className='col d-flex flex-column align-items-center border rounded p-4'>
@@ -21,6 +23,8 @@ const Dashboard = () => {
             <h2 className='text-primary'>10</h2>
           </div>
         </div>
+
+        {/* row 2 */}
         <div className='row mb-3 column-gap-4'>
           <div className='col d-flex flex-column align-items-center border rounded p-4'>
             <p><i class="fa-regular fa-file-lines fa-2x"></i></p>
